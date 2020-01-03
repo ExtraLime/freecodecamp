@@ -1146,3 +1146,474 @@ caseInSwitch(1);
 
 
 
+
+
+	adding-a-default-option-in-switch-statements.txt
+
+function switchOfStuff(val) {
+  var answer = "";
+  // Only change code below this line
+  switch(val){
+    case "a":
+      answer = 'apple';
+      break;
+    case 'b':
+      answer = 'bird';
+      break;
+    case 'c':
+      answer = 'cat'
+      break;
+    default:
+      answer = 'stuff'
+  }
+  // Only change code above this line
+  return answer;
+}
+
+// Change this value to test
+switchOfStuff(1);
+
+
+
+
+
+	multiple-identical-options-in-switch-statements.txt
+
+function sequentialSizes(val) {
+  var answer = "";
+  // Only change code below this line
+  switch(val){
+  case 1:
+  case 2:
+  case 3:
+    answer = 'Low';
+    break;
+  case 4:
+  case 5:
+  case 6:
+   answer = 'Mid';
+   break;
+  case 7:
+  case 8:
+  case 9:
+    answer = "High"
+    break;
+  }
+
+  // Only change code above this line
+  return answer;
+}
+
+// Change this value to test
+sequentialSizes(1);
+
+
+
+
+
+	replacing-if-else-chains-with-switch.txt
+
+function chainToSwitch(val) {
+  var answer = "";
+  // Only change code below this line
+
+  switch(val) {
+    case 'bob':
+      answer = "Marley";
+      break;
+    case 42:
+      answer = 'The Answer';
+      break;
+    case 1:
+      answer = "There is no #1";
+      break;
+   case 99:
+      answer = "Missed me by this much!";
+      break;
+   case 7:
+    answer = "Ate Nine";
+    break;
+  }
+
+  // Only change code above this line
+  return answer;
+}
+
+// Change this value to test
+chainToSwitch(7);
+
+
+
+
+
+	returning-boolean-values-from-functions.txt
+
+function isLess(a, b) {
+  // Fix this code
+  {
+    return a < b;
+  } 
+}
+
+// Change these values to test
+isLess(10, 15);
+
+
+
+
+
+	return-early-pattern-for-functions.txt
+
+// Setup
+function abTest(a, b) {
+  // Only change code below this line
+ if (a < 0 || b <0) {
+   return undefined
+ } else {
+
+  // Only change code above this line
+
+  return Math.round(Math.pow(Math.sqrt(a) + Math.sqrt(b), 2));
+ }
+}
+
+// Change values below to test your code
+abTest(20,-1)
+
+
+
+
+	counting-cards.txt
+
+var count = 0;
+
+function cc(card) {
+  // Only change code below this line
+  switch(card){
+    case 2:
+    case 3:
+    case 4:
+    case 5:
+    case 6:
+      count++
+      break;
+    case 7:
+    case 8:
+    case 9:
+      count = count;
+      break
+    case 10:
+    case 'J':
+    case 'Q':
+    case 'K':
+    case 'A':
+      count -= 1
+  }
+  console.log(count)
+  if (count > 0){
+    return count + " Bet";
+  }else {
+  return count + " Hold";
+  }
+  // Only change code above this line
+}
+
+// Add/remove calls to test your function.
+// Note: Only the last will display
+cc(2); cc(3); cc(7); cc('K'); cc('A');
+
+
+
+
+
+	build-javascript-objects.txt
+
+// Example
+var ourDog = {
+  "name": "Camper",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["everything!"]
+};
+
+// Only change code below this line.
+
+var myDog = {
+  "name": "pooper",
+  "legs": 18,
+  'tails': 2,
+  'friends': ['Me', 'myself', 'Irene']
+};
+
+
+
+
+
+	accessing-object-properties-with-dot-notation.txt
+
+// Setup
+var testObj = {
+  "hat": "ballcap",
+  "shirt": "jersey",
+  "shoes": "cleats"
+};
+
+// Only change code below this line
+
+var hatValue = testObj.hat;      // Change this line
+var shirtValue = testObj.shirt;    // Change this line
+
+
+
+
+
+	accessing-object-properties-with-bracket-notation.txt
+
+// Setup
+var testObj = {
+  "an entree": "hamburger",
+  "my side": "veggies",
+  "the drink": "water"
+};
+
+// Only change code below this line
+
+var entreeValue = testObj['an entree'];   // Change this line
+var drinkValue = testObj['the drink'];    // Change this line
+
+
+
+
+
+	accessing-object-properties-with-variables.txt
+
+// Setup
+var testObj = {
+  12: "Namath",
+  16: "Montana",
+  19: "Unitas"
+};
+
+// Only change code below this line;
+
+var playerNumber = 16;       // Change this Line
+var player = testObj[playerNumber];   // Change this Line
+
+
+
+
+
+	updating-object-properties.txt
+
+// Example
+var ourDog = {
+  "name": "Camper",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["everything!"]
+};
+
+ourDog.name = "Happy Camper";
+
+// Setup
+var myDog = {
+  "name": "Coder",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["freeCodeCamp Campers"]
+};
+
+// Only change code below this line.
+myDog.name = 'Happy Coder'
+
+
+
+
+
+	add-new-properties-to-a-javascript-object.txt
+
+// Example
+var ourDog = {
+  "name": "Camper",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["everything!"]
+};
+
+ourDog.bark = "bow-wow";
+
+// Setup
+var myDog = {
+  "name": "Happy Coder",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["freeCodeCamp Campers"]
+};
+
+// Only change code below this line.
+myDog['bark'] = 'woof'
+
+
+
+
+	delete-properties-from-a-javascript-object.txt
+
+// Example
+var ourDog = {
+  "name": "Camper",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["everything!"],
+  "bark": "bow-wow"
+};
+
+delete ourDog.bark;
+
+// Setup
+var myDog = {
+  "name": "Happy Coder",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["freeCodeCamp Campers"],
+  "bark": "woof"
+};
+
+// Only change code below this line.
+delete myDog.tails
+
+
+
+
+	using-objects-for-lookups.txt
+
+// Setup
+function phoneticLookup(val) {
+  var result = "";
+
+  // Only change code below this line
+  var lookup = {
+    "alpha":"Adams",
+    "bravo":"Boston",
+    "charlie":"Chicago",
+    "delta":"Denver",
+    "echo":"Easy",
+    "foxtrot":"Frank"
+  }
+  result = lookup[val]
+  // Only change code above this line
+  return result;
+}
+
+// Change this value to test
+phoneticLookup("charlie");
+
+
+
+
+
+	testing-objects-for-properties.txt
+
+// Setup
+var myObj = {
+  gift: "pony",
+  pet: "kitten",
+  bed: "sleigh"
+};
+
+function checkObj(checkProp) {
+  // Your Code Here
+  var prop = checkProp
+  if (myObj.hasOwnProperty(prop)){
+    return myObj[checkProp]
+  }
+  return "Not Found";
+}
+
+// Test your code by modifying these values
+checkObj("gift");
+
+
+
+
+
+	manipulating-complex-objects.txt
+
+var myMusic = [
+  {
+    "artist": "Billy Joel",
+    "title": "Piano Man",
+    "release_year": 1973,
+    "formats": [
+      "CD",
+      "8T",
+      "LP"
+    ],
+    "gold": true
+  },
+  // Add record here
+  {
+    "artist": "Billy Joel",
+    "title": "Piano Man",
+    "release_year": 1973,
+    "formats": [
+      "CD",
+      "8T",
+      "LP"
+    ],
+    "gold": true
+  }
+];
+
+
+
+
+
+	accessing-nested-objects.txt
+
+// Setup
+var myStorage = {
+  "car": {
+    "inside": {
+      "glove box": "maps",
+      "passenger seat": "crumbs"
+     },
+    "outside": {
+      "trunk": "jack"
+    }
+  }
+};
+
+var gloveBoxContents = myStorage.car.inside['glove box']; // Change this line
+
+
+
+
+
+	accessing-nested-arrays.txt
+
+// Setup
+var myPlants = [
+  {
+    type: "flowers",
+    list: [
+      "rose",
+      "tulip",
+      "dandelion"
+    ]
+  },
+  {
+    type: "trees",
+    list: [
+      "fir",
+      "pine",
+      "birch"
+    ]
+  }
+];
+
+// Only change code below this line
+
+var secondTree = myPlants[1].list[1]; // Change this line
+
+
+
