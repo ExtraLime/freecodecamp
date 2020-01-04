@@ -1669,3 +1669,160 @@ updateRecords(5439, 'tracks', "not this");
 
 
 
+
+
+	iterate-with-javascript-while-loops.txt
+
+// Setup
+var myArray = [];
+
+// Only change code below this line.
+var i = 5;
+while(i>=0){
+    myArray.push(i)
+    i -= 1;
+}
+
+
+
+
+	iterate-with-javascript-for-loops.txt
+
+// Example
+var ourArray = [];
+
+for (var i = 0; i < 5; i++) {
+  ourArray.push(i);
+}
+
+// Setup
+var myArray = [];
+
+// Only change code below this line.
+for (var i = 1; i<=5; i++) {
+  myArray.push(i)
+}
+console.log(myArray)
+
+
+
+
+	iterate-odd-numbers-with-a-for-loop.txt
+
+// Example
+var ourArray = [];
+
+for (var i = 0; i < 10; i += 2) {
+  ourArray.push(i);
+}
+
+// Setup
+var myArray = [];
+
+// Only change code below this line.
+for (var i = 1; i < 10; i+=2){
+  myArray.push(i)
+}
+console.log(myArray)
+
+
+
+
+	count-backwards-with-a-for-loop.txt
+
+// Example
+var ourArray = [];
+
+for (var i = 10; i > 0; i -= 2) {
+  ourArray.push(i);
+}
+
+// Setup
+var myArray = [];
+
+// Only change code below this line.
+for (var i = 9; i>0;i-=2){
+  myArray.push(i)
+}
+console.log(myArray)
+
+
+
+
+	iterate-through-an-array-with-a-for-loop.txt
+
+// Example
+var ourArr = [ 9, 10, 11, 12];
+var ourTotal = 0;
+
+for (var i = 0; i < ourArr.length; i++) {
+  ourTotal += ourArr[i];
+}
+
+// Setup
+var myArr = [ 2, 3, 4, 5, 6];
+
+// Only change code below this line
+var total = 0
+
+for (var i = 0; i < myArr.length;i++){
+  total += myArr[i];
+}
+console.log(total)
+
+
+
+
+	nesting-for-loops.txt
+
+function multiplyAll(arr) {
+  var product = 1;
+  // Only change code below this line
+  for (var i=0; i<arr.length;i++){
+    for (var j=0;j<arr[i].length;j++){
+      product *= arr[i][j]
+    }
+  }
+  // Only change code above this line
+  return product;
+}
+
+// Modify values below to test your code
+multiplyAll([[1,2],[3,4],[5,6,7]]);
+
+
+
+
+
+	iterate-with-javascript-do...while-loops.txt
+
+// Setup
+var myArray = [];
+var i = 10;
+
+// Only change code below this line
+do {
+  myArray.push(i);
+  i++;
+}while (i < 5);
+
+
+
+
+
+
+
+	replace-loops-using-recursion.txt
+
+function sum(arr, n) {
+  // Only change code below this line
+  if (n <= 0){
+    return arr[0]
+  }else{
+    return sum(arr, n-1) + arr[n]
+  }
+  // Only change code above this line
+}
+
+
+
