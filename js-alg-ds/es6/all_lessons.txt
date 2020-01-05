@@ -382,3 +382,140 @@ temp = thermos.temperature; // 26 in C
 
 
 
+
+
+	create-a-module-script.txt
+
+<html>
+  <body>
+    <!-- add your code below -->
+    <script type="module" src="index.js"></script>
+    <!-- add your code above -->
+  </body>
+</html>
+
+
+
+
+
+	use-export-to-share-a-code-block.txt
+
+const uppercaseString = (string) => {
+  return string.toUpperCase();
+}
+
+const lowercaseString = (string) => {
+  return string.toLowerCase()
+}
+export {uppercaseString,lowercaseString}
+
+
+
+
+	reuse-javascript-code-using-import.txt
+
+import {uppercaseString,lowercaseString} from './string_functions.js';  
+// add code above this line
+
+uppercaseString("hello");
+lowercaseString("WORLD!");
+
+
+
+
+
+	use--to-import-everything-from-a-file.txt
+
+import * as stringFunctions from './string_functions.js';
+// add code above this line
+
+stringFunctions.uppercaseString("hello");
+stringFunctions.lowercaseString("WORLD!");
+
+
+
+
+
+	create-an-export-fallback-with-export-default.txt
+
+export default function subtract(x, y) {
+  return x - y;
+}
+
+
+
+
+
+	import-a-default-export.txt
+
+import subtract from './math_functions.js';  
+// add code above this line
+
+subtract(7,4);
+
+
+
+
+
+	create-a-javascript-promise.txt
+
+const makeServerRequest = new Promise((resolve,reject) => {});
+
+
+
+
+	complete-a-promise-with-resolve-and-reject.txt
+
+const makeServerRequest = new Promise((resolve, reject) => {
+  // responseFromServer represents a response from a server
+  let responseFromServer;
+    
+  if (responseFromServer) {
+    resolve("We got the data");
+  } else {  
+    reject("Data not received")
+    }
+});
+
+
+
+
+
+	handle-a-fulfilled-promise-with-then.txt
+
+const makeServerRequest = new Promise((resolve, reject) => {
+  // responseFromServer is set to true to represent a successful response from a server
+  let responseFromServer = true;
+    
+  if(responseFromServer) {
+    resolve("We got the data")
+    makeServerRequest.then(result => {console.log(result)});
+  } else {  
+    reject("Data not received");
+  }
+});
+
+
+
+
+
+	handle-a-rejected-promise-with-catch.txt
+
+const makeServerRequest = new Promise((resolve, reject) => {
+  // responseFromServer is set to false to represent an unsuccessful response from a server
+  let responseFromServer = false;
+    
+  if(responseFromServer) {
+    resolve("We got the data");
+  } else {  
+    reject("Data not received")
+    makeServerRequest.catch(error =>{console.log(error)});
+  }
+});
+
+makeServerRequest.then(result => {
+  console.log(result);
+});
+
+
+
