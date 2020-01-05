@@ -1,0 +1,278 @@
+Start
+
+
+
+
+	explore-differences-between-the-var-and-let-keywords.txt
+
+let catName = "Oliver";
+let quote = catName + " says Meow!";
+
+function catTalk() {
+  "use strict";
+  return quote
+}
+catTalk();
+console.log(catTalk())
+
+
+
+
+	compare-scopes-of-the-var-and-let-keywords.txt
+
+function checkScope() {
+  'use strict';
+  let i = 'function scope';
+  if (true) {
+    let i = 'block scope';
+    console.log('Block scope i is: ', i);
+  }
+  console.log('Function scope i is: ', i);
+  return i;
+}
+console.log(checkScope())
+
+
+
+
+	declare-a-read-only-variable-with-the-const-keyword.txt
+
+function printManyTimes(str) {
+  "use strict";
+
+  // change code below this line
+
+  const SENTENCE = str + " is cool!";
+  for (let i = 0; i < str.length; i+=2) {
+    console.log(SENTENCE);
+  }
+
+  // change code above this line
+
+}
+printManyTimes("freeCodeCamp");
+
+
+
+
+
+	mutate-an-array-declared-with-const.txt
+
+const s = [5, 7, 2];
+function editInPlace() {
+  'use strict';
+  // change code below this line
+  var first = s.pop();
+  s.unshift(first)
+  // s = [2, 5, 7]; <- this is invalid
+  return s
+  // change code above this line
+}
+console.log(editInPlace())
+
+
+
+
+
+	prevent-object-mutation.txt
+
+function freezeObj() {
+  'use strict';
+  const MATH_CONSTANTS = {
+    PI: 3.14
+  };
+  // change code below this line
+  Object.freeze(MATH_CONSTANTS)
+
+  // change code above this line
+  try {
+    MATH_CONSTANTS.PI = 99;
+  } catch(ex) {
+    console.log(ex);
+  }
+  return MATH_CONSTANTS.PI;
+}
+const PI = freezeObj();
+
+
+
+
+
+	use-arrow-functions-to-write-concise-anonymous-functions.txt
+
+const magic = () => {
+  "use strict";
+  return new Date();
+};
+
+
+
+
+
+	write-arrow-functions-with-parameters.txt
+
+const myConcat = (arr1, arr2) =>{
+  "use strict";
+  return arr1.concat(arr2);
+};
+// test your code
+console.log(myConcat([1, 2], [3, 4, 5]));
+
+
+
+
+
+	set-default-parameters-for-your-functions.txt
+
+const increment = (number, value=1) => number + value;
+
+console.log(increment(5, 2)); // returns 7
+console.log(increment(5)); // returns 6
+
+
+
+
+
+	use-the-rest-parameter-with-function-parameters.txt
+
+const sum = (...args) => {
+  return args.reduce((a, b) => a + b, 0);
+}
+console.log(sum(1, 2, 3)); // 6
+
+
+
+
+
+	use-the-spread-operator-to-evaluate-arrays-in-place.txt
+
+const arr1 = ['JAN', 'FEB', 'MAR', 'APR', 'MAY'];
+let arr2;
+
+arr2 = [...arr1];  // change this line
+
+console.log(arr2);
+
+
+
+
+
+	use-destructuring-assignment-to-extract-values-from-objects.txt
+
+const HIGH_TEMPERATURES = {
+  yesterday: 75,
+  today: 77,
+  tomorrow: 80
+};
+
+// change code below this line
+
+const {today, tomorrow} = HIGH_TEMPERATURES;
+
+// change code above this line
+
+console.log(yesterday) // should be not defined
+console.log(today); // should be 77
+console.log(tomorrow); // should be 80
+
+
+
+
+
+	use-destructuring-assignment-to-assign-variables-from-objects.txt
+
+const HIGH_TEMPERATURES = {
+  yesterday: 75,
+  today: 77,
+  tomorrow: 80
+};
+
+// change code below this line
+  
+const {today: highToday, tomorrow:highTomorrow} = HIGH_TEMPERATURES;
+
+// change code above this line
+
+console.log(yesterday) // should be not defined
+console.log(highToday); // should be 77
+console.log(highTomorrow); // should be 80
+
+
+
+
+
+	use-destructuring-assignment-to-assign-variables-from-nested-objects.txt
+
+const LOCAL_FORECAST = {
+  yesterday: { low: 61, high: 75 },
+  today: { low: 64, high: 77 },
+  tomorrow: { low: 68, high: 80 }
+};
+
+// change code below this line
+  
+const {today :{high: highToday, low: lowToday}} = LOCAL_FORECAST;
+
+
+// change code above this line
+
+console.log(lowToday); // should be 64
+console.log(highToday); // should be 77
+
+
+
+
+
+	use-destructuring-assignment-to-assign-variables-from-arrays.txt
+
+var a = 8, b = 6;
+// change code below this line
+[a,b] =[b,a]
+// change code above this line
+console.log(a); // should be 6
+console.log(b); // should be 8
+
+
+
+
+
+	use-destructuring-assignment-with-the-rest-parameter-to-reassign-array-elements.txt
+
+const source = [1,2,3,4,5,6,7,8,9,10];
+function removeFirstTwo(list) {
+  "use strict";
+  // change code below this line
+  const [a,b,...arr] = list;
+   // change this
+  // change code above this line
+  return arr;
+}
+const arr = removeFirstTwo(source);
+console.log(arr); // should be [3,4,5,6,7,8,9,10]
+console.log(source); // should be [1,2,3,4,5,6,7,8,9,10];
+
+
+
+
+
+	use-destructuring-assignment-to-pass-an-object-as-a-functions-parameters.txt
+
+const stats = {
+  max: 56.78,
+  standard_deviation: 4.34,
+  median: 34.54,
+  mode: 23.87,
+  min: -0.75,
+  average: 35.85
+};
+
+// change code below this line
+const half = ({max,min}) => {return (max+min)/2.0}; 
+// use function argument destructuring
+// change code above this line
+
+console.log(stats); // should be object
+console.log(half(stats)); // should be 28.015
+
+
+
