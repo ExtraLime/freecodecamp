@@ -234,3 +234,95 @@ let result = sample.match(countWhiteSpace);
 
 
 
+
+
+	match-non-whitespace-characters.txt
+
+let sample = "Whitespace is important in separating words";
+let countNonWhiteSpace = /\S/g; // Change this line
+let result = sample.match(countNonWhiteSpace);
+
+
+
+
+
+	specify-upper-and-lower-number-of-matches.txt
+
+let ohStr = "Ohhh no";
+let ohRegex = /Oh{3,6} no/ig; // Change this line
+let result = ohRegex.test(ohStr);
+
+
+
+
+
+	specify-only-the-lower-number-of-matches.txt
+
+let haStr = "Hazzzzah";
+let haRegex = /Haz{4,}ah/; // Change this line
+let result = haRegex.test(haStr);
+
+
+
+
+
+	specify-exact-number-of-matches.txt
+
+let timStr = "Timmmmber";
+let timRegex = /Tim{4}ber/; // Change this line
+let result = timRegex.test(timStr);
+
+
+
+
+
+	check-for-all-or-none.txt
+
+let favWord = "favorite";
+let favRegex = /favou?rite/; // Change this line
+let result = favRegex.test(favWord);
+
+
+
+
+
+	positive-and-negative-lookahead.txt
+
+let sampleWord = "astronaut";
+let pwRegex = /^(?=\w{6})(?=\D+\d{2})/; // Change this line
+let result = pwRegex.test(sampleWord);
+
+
+
+
+
+	check-for-mixed-grouping-of-characters.txt
+
+let myString = "Eleanor Roosevelt";
+let myRegex = /(Franklin|Eleanor\s+)?\w+?.?\s+Roosevelt/i; // Change this line
+let result = myRegex.test(myString); // Change this line
+// After passing the challenge experiment with myString and see how the grouping works
+
+
+
+
+
+	reuse-patterns-using-capture-groups.txt
+
+let repeatNum = "42 42 42";
+let reRegex = /^(\d+)\s\1\s\1$/; // Change this line
+let result = repeatNum.match(reRegex);
+
+
+
+
+
+	use-capture-groups-to-search-and-replace.txt
+
+let str = "one two three";
+let fixRegex = /(\w+)\s(\w+)\s(\w+)/; // Change this line
+let replaceText = "$3 $2 $1"; // Change this line
+let result = str.replace(fixRegex, replaceText);
+
+
+
