@@ -448,3 +448,65 @@ console.log(addFriend(user, 'Pete'));
 
 
 
+
+
+	use-the-javascript-console-to-check-the-value-of-a-variable.txt
+
+let a = 5;
+let b = 1;
+a++;
+// Add your code below this line
+
+console.log(a)
+let sumAB = a + b;
+console.log(sumAB);
+
+
+
+
+
+	title-case-a-sentence.txt
+
+function titleCase(str) {
+  let words = str.split(' ');
+  let newStr = '' ;
+  for (let word in words){
+    let newWord = '';
+    newWord += words[word][0].toUpperCase()
+    newWord += words[word].slice(1).toLowerCase()
+    newStr += newWord
+    newStr += ' '
+    }
+  return newStr.slice(0,newStr.length-1);
+}
+
+titleCase("I'm a little tea pot");
+
+
+
+
+
+	slice-and-splice.txt
+
+function frankenSplice(arr1, arr2, n) {
+  let newArr = arr2
+  newArr.splice(n,0,...arr1.slice())
+  return newArr;
+}
+
+console.log(frankenSplice([1, 2, 3], [4, 5, 6], 1))
+
+
+
+
+
+	falsy-bouncer.txt
+
+function bouncer(arr) {
+    return arr.filter(Boolean);
+}
+
+bouncer([null, NaN, 1, 2, undefined]);
+
+
+
