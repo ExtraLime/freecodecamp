@@ -510,3 +510,28 @@ bouncer([null, NaN, 1, 2, undefined]);
 
 
 
+
+
+	where-do-i-belong.txt
+
+function getIndexToIns(arr, num) {
+  arr = arr.sort(function(a, b){return a-b})
+  if (num > Math.max(...arr)){arr.push(num)}
+  console.log(arr)
+  if (num in arr){return arr.indexOf(arr[i])-1
+  }
+  
+  for (let i=0;i<arr.length;i++){
+    if (num == arr[i]){return arr.indexOf(num)}
+    if (num < arr[i]){console.log(i)
+      return i
+    }
+  }
+  return 0
+  ;
+}
+
+getIndexToIns([2, 5, 10], 15);
+
+
+
