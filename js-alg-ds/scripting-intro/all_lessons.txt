@@ -1,0 +1,163 @@
+Start
+
+
+
+
+	convert-celsius-to-fahrenheit.txt
+
+function convertToF(celsius) {
+  let fahrenheit = (9/5)*celsius + 32;
+  return fahrenheit;
+}
+
+convertToF(30);
+
+
+
+
+
+	reverse-a-string.txt
+
+function reverseString(str) {
+ let newStr = ''
+for (let i= str.length-1;i>=0;i--){
+  console.log(str[i])
+newStr += str[i]
+}
+  return newStr;
+}
+
+reverseString("hello");
+
+
+
+
+
+	factorialize-a-number.txt
+
+function factorialize(num) {
+  let res = 1
+  for (let i=num;i>0;i--){
+    res *= i
+  }
+  return res;
+}
+
+factorialize(5);
+
+
+
+
+
+	find-the-longest-word-in-a-string.txt
+
+function findLongestWordLength(str) {
+  let word_list = str.split(' ')
+  let longest = 0
+  for (let i=0;i<word_list.length;i++){
+    if (word_list[i].length > longest){
+      longest = word_list[i].length
+    }
+  }
+  return longest;
+}
+findLongestWordLength("The quick brown fox jumped over the lazy dog");
+
+
+
+
+
+	return-largest-numbers-in-arrays.txt
+
+function largestOfFour(arr) {
+  let largest = []
+  for (let i=0;i<arr.length;i++){
+
+    largest.push(Math.max(...arr[i]))
+  }
+  return largest;
+}
+
+largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
+
+
+
+
+
+	confirm-the-ending.txt
+
+function confirmEnding(str, target) {
+  
+  return str.slice(-target.length) == target;
+}
+
+confirmEnding("Bastian", "n");
+
+
+
+
+
+	repeat-a-string-repeat-a-string.txt
+
+function repeatStringNumTimes(str, num) {
+  let newStr = ''
+  for (let i=0;i<num;i++){
+    newStr += str
+  }
+  return newStr;
+}
+
+repeatStringNumTimes("abc", 3);
+
+
+
+
+
+	truncate-a-string.txt
+
+function truncateString(str, num) {
+  if (str.length <= num){
+    return str;
+  }else{
+  return str.slice(0,num)+"...";
+  }
+}
+
+truncateString("A-tisket a-tasket A green and yellow basket", 8);
+
+
+
+
+
+	finders-keepers.txt
+
+function findElement(arr, func) {
+  let num = 0;
+  for (let i in arr){
+    console.log(func(arr[i]))
+    if (func(arr[i])){
+      return arr[i]
+    }
+  }
+  
+}
+
+findElement([1, 2, 3, 4], num => num % 2 === 0);
+
+
+
+
+
+	boo-who.txt
+
+function booWho(bool) {
+  if (bool === true){return true
+  }else if (bool === false){return true
+}else {return false}
+  return bool in [true,false];
+}
+
+console.log(booWho(null));
+
+
+
