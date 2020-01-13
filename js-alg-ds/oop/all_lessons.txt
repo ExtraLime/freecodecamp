@@ -89,3 +89,81 @@ dog.sayLegs();
 
 
 
+
+
+	use-prototype-properties-to-reduce-duplicate-code.txt
+
+function Dog(name) {
+  this.name = name;
+}
+
+
+
+// Add your code above this line
+let beagle = new Dog("Snoopy");
+Dog.prototype.numLegs = 4
+
+
+
+
+	understand-the-constructor-property.txt
+
+function Dog(name) {
+  this.name = name;
+}
+
+// Add your code below this line
+function joinDogFraternity(candidate) {
+if (candidate.constructor === Dog){
+  return true;
+}else {return false;
+}
+}
+
+
+
+
+
+	iterate-over-all-properties.txt
+
+function Dog(name) {
+  this.name = name;
+}
+
+Dog.prototype.numLegs = 4;
+
+let beagle = new Dog("Snoopy");
+
+let ownProps = [];
+let prototypeProps = [];
+
+// Add your code below this line
+for (let property in beagle){
+  if (beagle.hasOwnProperty(property)){
+    ownProps.push(property)
+  }else {
+    prototypeProps.push(property)
+  }
+}
+
+
+
+
+	understand-own-properties.txt
+
+function Bird(name) {
+  this.name = name;
+  this.numLegs = 2;
+}
+
+let canary = new Bird("Tweety");
+let ownProps = [];
+// Add your code below this line
+for (let property in canary){
+  if (canary.hasOwnProperty(property)){
+    ownProps.push(property);
+  }
+}
+console.log(ownProps)
+
+
