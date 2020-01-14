@@ -344,3 +344,182 @@ for (let property in canary){
 console.log(ownProps)
 
 
+
+
+	inherit-behaviors-from-a-supertype.txt
+
+function Animal() { }
+
+Animal.prototype = {
+  constructor: Animal,
+  eat: function() {
+    console.log("nom nom nom");
+  }
+};
+
+// Add your code below this line
+
+let duck = Object.create(Animal.prototype); // Change this line
+let beagle = Object.create(Animal.prototype); // Change this line
+
+duck.eat(); // Should print "nom nom nom"
+beagle.eat(); // Should print "nom nom nom"
+
+
+
+
+
+	set-the-childs-prototype-to-an-instance-of-the-parent.txt
+
+function Animal() { }
+
+Animal.prototype = {
+  constructor: Animal,
+  eat: function() {
+    console.log("nom nom nom");
+  }
+};
+
+function Dog() { }
+
+// Add your code below this line
+Dog.prototype = Object.create(Animal.prototype)
+
+let beagle = new Dog();
+beagle.eat();  // Should print "nom nom nom"
+
+
+
+
+
+	reset-an-inherited-constructor-property.txt
+
+function Animal() { }
+function Bird() { }
+function Dog() { }
+
+Bird.prototype = Object.create(Animal.prototype);
+Dog.prototype = Object.create(Animal.prototype);
+
+// Add your code below this line
+
+Bird.prototype.constructor = Bird
+Dog.prototype.constructor = Dog
+
+let duck = new Bird();
+let beagle = new Dog();
+
+
+
+
+
+	add-methods-after-inheritance.txt
+
+function Animal() { }
+Animal.prototype.eat = function() { console.log("nom nom nom"); };
+
+function Dog() { }
+
+// Add your code below this line
+Dog.prototype = Object.create(Animal.prototype)
+Dog.prototype.constructor = Dog
+
+Dog.prototype.bark = function(){console.log('Woof!')}
+
+
+
+// Add your code above this line
+
+let beagle = new Dog();
+
+beagle.eat(); // Should print "nom nom nom"
+beagle.bark(); // Should print "Woof!"
+
+
+
+
+
+	override-inherited-methods.txt
+
+function Bird() { }
+
+Bird.prototype.fly = function() { return "I am flying!"; };
+
+function Penguin() { }
+Penguin.prototype = Object.create(Bird.prototype);
+Penguin.prototype.constructor = Penguin;
+
+// Add your code below this line
+
+Penguin.prototype.fly = function() {return "Alas, this is a flightless bird."}
+
+// Add your code above this line
+
+let penguin = new Penguin();
+console.log(penguin.fly());
+
+
+
+
+
+	use-a-mixin-to-add-common-behavior-between-unrelated-objects.txt
+
+let bird = {
+  name: "Donald",
+  numLegs: 2
+};
+
+let boat = {
+  name: "Warrior",
+  type: "race-boat"
+};
+
+// Add your code below this line
+let glideMixin = function(obj) {
+  obj.glide = function() {
+    console.log("Sweeeeeee,sweeeshooo")
+  }
+}
+glideMixin(boat)
+glideMixin(bird)
+
+boat.glide()
+bird.glide()
+
+
+
+
+	use-closure-to-protect-properties-within-an-object-from-being-modified-externally.txt
+
+function Bird() {
+  let weight = 15;
+
+  this.getWeight = function(){
+    return weight
+  }
+
+}
+
+
+
+
+
+	use-an-iife-to-create-a-module.txt
+
+let funModule = (function(){
+  return {
+isCuteMixin : function(obj) {
+  obj.isCute = function() {
+    return true;
+  };
+},
+singMixin : function(obj) {
+  obj.sing = function() {
+    console.log("Singing to an awesome tune");
+  };
+}
+  }
+})()
+
+
+
