@@ -1,0 +1,54 @@
+Start
+
+
+
+
+	sum-all-numbers-in-a-range.txt
+
+function sumAll(arr) {
+  let sum = Math.min(...arr);
+  for (let i = 1;i<(Math.max(...arr)-Math.min(...arr))+1;i++){
+    console.log(i)
+    sum += Math.min(...arr)+i
+  }
+  return sum;
+}
+
+console.log(sumAll([4,1]))
+
+
+
+
+
+	diff-two-arrays.txt
+
+function diffArray(arr1, arr2) {
+  var newArr = [];
+  var anArr = arr1.concat(arr2);
+  for (let i=0;i<anArr.length;i++){
+    if (anArr.filter(x => x === anArr[i]).length == 1){
+      newArr.push(anArr[i])
+    }
+  }
+  return newArr;
+}
+
+console.log(diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]))
+
+
+
+
+
+	seek-and-destroy.txt
+
+function destroyer(arr) {
+  let argIdx = arguments.length;
+  for (let i=1;i<argIdx;i++){
+    arr = arr.filter(item => item != arguments[i])}
+  return arr;
+}
+
+destroyer([1, 2, 3, 1, 2, 3], 2, 3);
+
+
+
