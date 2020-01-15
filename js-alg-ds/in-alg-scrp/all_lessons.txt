@@ -52,3 +52,36 @@ destroyer([1, 2, 3, 1, 2, 3], 2, 3);
 
 
 
+
+
+	wherefore-art-thou.txt
+
+function whatIsInAName(collection, source) {
+  // What's in a name?
+  var arr = [];
+  // Only change code below this line
+  for (let item in collection){
+    let tempObj = {}
+    let c = collection[item];
+    for (let key in source){      
+      if (c.hasOwnProperty(key)){
+        if (c[key]===source[key]){
+          tempObj[key] = c[key]
+          console.log(tempObj)
+        };
+        
+      }
+      if (Object.keys(tempObj).length >= Object.keys(source).length){
+        arr.push(collection[item])
+      }
+    }
+  }
+
+  // Only change code above this line
+  return arr;
+}
+
+console.log(whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" }))
+
+
+
