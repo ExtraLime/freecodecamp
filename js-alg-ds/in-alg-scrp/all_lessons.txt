@@ -195,3 +195,42 @@ console.log(uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]))
 
 
 
+
+
+	convert-html-entities.txt
+
+function convertHTML(str) {
+  let rep = {'&':'&amp;',
+             '<':'&lt;',
+             '>':'&gt;',
+             '"':'&quot;',
+             "'":'&apos;'}
+  for(let i in Object.keys(rep)){
+    str = str.split(Object.keys(rep)[i]).join(rep[Object.keys(rep)[i]])
+  }
+  return str;
+}
+
+console.log(convertHTML("Dolce & Gabbana"))
+
+
+
+
+
+	sum-all-odd-fibonacci-numbers.txt
+
+function sumFibs(num) {
+  let fibs = [1,1]
+  let lfib = 1   
+    while(lfib <= num){
+      lfib = fibs[fibs.length-1]+fibs[fibs.length-2]
+      if (lfib <= num){
+      fibs.push(lfib)}     
+    }
+  
+  return fibs.filter(function(i){return i%2}).reduce(function(a,b){return a+b});
+}
+console.log(sumFibs(14))
+
+
+
