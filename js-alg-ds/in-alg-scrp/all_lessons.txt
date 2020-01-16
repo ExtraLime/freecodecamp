@@ -234,3 +234,111 @@ console.log(sumFibs(14))
 
 
 
+
+
+	sum-all-primes.txt
+
+
+function sumPrimes(num) {
+  var primeSum = [2]
+  for(var n=3;n<=num;n+=2) {
+  if(primeSum.every(function(primeSum){
+    return n%primeSum!=0})){
+    primeSum.push(n);}}
+  return primeSum.reduce(function(a,b){return a+b});
+}
+
+console.log(sumPrimes(977))
+
+
+
+
+	smallest-common-multiple.txt
+
+function smallestCommons(arr) {
+  let min = Math.min(...arr)
+  let max = Math.max(...arr)
+
+  let lcm = max
+
+  for (let i=max-1;i>=min;i--){
+    if (lcm%i){lcm+=max;i=max}
+  }
+
+  return lcm;
+}
+
+
+smallestCommons([1,5]);
+
+
+
+
+
+	drop-it.txt
+
+function dropElements(arr, func) {
+  // Drop them elements.
+  let newArr=[]
+  for (let i=0;i<arr.length;i++){
+    if (func(arr[i])){
+      newArr = arr.slice(i)
+      break
+    }
+  }
+  return newArr;
+}
+
+console.log(dropElements([0, 1, 0, 1], function(n) {return n === 1;}));
+
+
+
+
+
+	steamroller.txt
+
+function steamrollArray(arr) {
+  
+  return arr.flat(Infinity);
+}
+
+console.log(steamrollArray([1, [2], [3, [[4]]]]))
+
+
+
+
+
+	steamroller(1).txt
+
+function steamrollArray(arr) {
+  console.log(...arr)
+  let stack = [...arr]
+  
+  let res = []
+  
+  while (stack.length){
+    let item = stack.pop()
+    if (Array.isArray(item)){
+      stack.push(...item)
+      }else {res.push(item)
+      }
+  }
+  return res.reverse();
+}
+
+console.log(steamrollArray([1, [2], [3, [[4]]]]))
+
+
+
+
+
+	binary-agents.txt
+
+function binaryAgent(str) {
+  return str.split(" ").map(function(elem){return String.fromCharCode(parseInt(elem,2))}).join('');
+}
+
+binaryAgent("01000001 01110010 01100101 01101110 00100111 01110100 00100000 01100010 01101111 01101110 01100110 01101001 01110010 01100101 01110011 00100000 01100110 01110101 01101110 00100001 00111111");
+
+
+
