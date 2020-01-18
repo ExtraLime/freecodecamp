@@ -1,0 +1,41 @@
+Start
+
+
+
+
+	map-the-debris.txt
+
+function orbitalPeriod(arr) {
+  let newArr = []
+  var GM = 398600.4418;
+  var earthRadius = 6367.4447;
+  for (let i in arr){
+    let h = arr[i]['avgAlt']+earthRadius
+    let n = 4*Math.pow(Math.PI,2)*Math.pow(h,3)
+    let x = n/GM
+    let oP = Math.round(Math.sqrt((x)))
+    newArr.push({name:arr[i]['name'],orbitalPeriod: oP})
+  }
+  return newArr;
+}
+
+console.log(orbitalPeriod([{name : "sputnik", avgAlt : 35873.5553}]));
+console.log(orbitalPeriod([{name: "iss", avgAlt: 413.6}, {name: "hubble", avgAlt: 556.7}, {name: "moon", avgAlt: 378632.553}]))
+
+
+
+
+	palindrome-checker.txt
+
+function palindrome(str) {
+  str = str.replace(/[^A-Za-z0-9]/g,'').toLowerCase()
+  let compStr = str.split('').reverse().join('')
+  return (compStr==str);
+}
+
+
+
+console.log(palindrome("A man, a plan, a canal. Panama"))
+
+
+
