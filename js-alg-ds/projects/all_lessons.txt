@@ -64,3 +64,62 @@ console.log(convertToRoman(36))
 
 
 
+
+
+	caesars-cipher.txt
+
+function rot13(str) { // LBH QVQ VG!
+let ref = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+let ans = '';
+for (let letter in str){
+  let idx = ref.indexOf(str[letter]);
+    if (idx < 0){
+      ans += str[letter]
+    }else if (idx<13){
+      ans += ref[idx+13]
+    }else {ans += ref[idx-13]}
+    }
+  return ans;
+}
+
+// Change the inputs below to test
+rot13("SERR PBQR PNZC");
+
+
+
+
+
+	telephone-number-validator.txt
+
+function telephoneCheck(str) {
+  let len = str.match(/[()0-9]+/g).join('').length
+  console.log(str.match(/[()0-9]+/g).join(''))
+  let val = str.match(/[()0-9]+/g).join('')
+  if (str[0]=='-'){
+    return false
+  }
+  else if (len==13){console.log(val[0])
+    if (val[0]==='1'){
+      if ((val[1]=='(') && (val[5]==')')){
+        return true
+      }
+    }
+  }else if (len == 12){
+    if ((val[0]=='(')&&(val[4]==')')){
+      return true
+    }
+  }else if (len==11){
+    if (val[0]==1){
+      return true
+    }
+  }else if (len==10){
+    return true
+  }
+  
+  return false;
+}
+
+console.log(telephoneCheck("-1 (757) 622-7382"))
+
+
+
