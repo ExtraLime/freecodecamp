@@ -39,3 +39,28 @@ console.log(palindrome("A man, a plan, a canal. Panama"))
 
 
 
+
+
+	roman-numeral-converter.txt
+
+function convertToRoman(num) {
+    let romanBank = {'M':1000,"CM":900,'D':500,'CD':400,'C':100,'XC':90,"L":50,'XL':40,'X':10,'IX':9,'V':5,'IV':4,'I':1};
+    let ans = '';
+    let c_rmn;
+    for (let letter in romanBank){
+        c_rmn = Math.floor(num/romanBank[letter])
+        
+        if (c_rmn >= 0){
+            for (let i=0;i<c_rmn;i++){
+                ans += letter
+            }
+        }
+        num = num%romanBank[letter]
+    }
+ return ans;
+}
+
+console.log(convertToRoman(36))
+
+
+
