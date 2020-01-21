@@ -123,3 +123,67 @@ console.log(telephoneCheck("-1 (757) 622-7382"))
 
 
 
+
+
+	cash-register.txt
+
+function checkCashRegister(price, cash, cid) {
+  let vals = [.01,.05,.1,.25,1,5,10,20,100]
+  //set up initial variables
+  var changeDue = cash-price.toFixed(2);
+  let stat = 'OPEN';
+  let tot_cid = cid.reduce(function(a,b){return a+b[1]},0).toFixed(2)
+  let ch_obj = []
+  //check if register has enough funds
+  if (changeDue > tot_cid){
+    stat = 'INSUFFICIENT_FUNDS'
+    return {status:stat,change:[]}
+  }else {
+    for (let i=vals.length-1;i>=0;i--){      
+      var fact = (changeDue/vals[i]).toFixed(2)      
+      if (changeDue>=vals[i]){
+        if (cid[i][1]>=vals[i]){
+        let denoms = Math.floor(Math.min(changeDue.toFixed(2)/vals[i],cid[i][1]/vals[i]))
+        ch_obj.push([cid[i][0],denoms*vals[i]])
+        console.log(ch_obj)
+        changeDue -= denoms*vals[i]
+        }
+      }
+    }
+    let cha = cid.reduce(function(a,b){return a+b[1]},0)
+    let ocha = ch_obj.reduce(function(a,b){return a+b[1]},0)
+    if (cha > ocha){
+      if (ch_obj.reduce(function(a,b){return a+b[1]},0).toFixed(2)==
+    cash-price.toFixed(2)){
+      return {status:stat,change:ch_obj}
+    }else return {status:'INSUFFICIENT_FUNDS',change:[]}
+    }
+    if (ch_obj.reduce(function(a,b){return a+b[1]},0).toFixed(2)==
+    cash-price.toFixed(2)){
+      if (cid.reduce(function(a,b){return a+b[1]},0).toFixed(2) == ch_obj.reduce(function(a,b){return a+b[1]},0).toFixed(2)){stat = 'CLOSED'
+      return {status:stat,change:cid};
+      }else{
+        return {status:'INSUFFICIENT_FUNDS',change:[]}
+      }
+    }
+    }
+}
+  // Here is your change, ma'am.
+  
+
+
+// Example cash-in-drawer array:
+// [["PENNY", 1.01],
+// ["NICKEL", 2.05],
+// ["DIME", 3.1],
+// ["QUARTER", 4.25],
+// ["ONE", 90],
+// ["FIVE", 55],
+// ["TEN", 20],
+// ["TWENTY", 60],
+// ["ONE HUNDRED", 100]]
+
+console.log(checkCashRegister(19.5, 20, [["PENNY", 0.01], ["NICKEL", 0], ["DIME", 0], ["QUARTER", 0], ["ONE", 1], ["FIVE", 0], ["TEN", 0], ["TWENTY", 0], ["ONE HUNDRED", 0]]))
+
+
+
