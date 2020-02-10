@@ -1063,3 +1063,292 @@ right: 50px;
 
 
 
+
+
+	adjust-the-tone-of-a-color.txt
+
+<style>
+  header {
+    background-color: hsl(180, 90%, 35%);
+    color: #FFFFFF;
+  }
+
+  nav {
+    background-color: hsl(180, 80%, 25%);
+  }
+
+  h1 {
+    text-indent: 10px;
+    padding-top: 10px;
+  }
+
+  nav ul {
+    margin: 0px;
+    padding: 5px 0px 5px 30px;
+  }
+
+  nav li {
+    display: inline;
+    margin-right: 20px;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+</style>
+
+<header>
+  <h1>Cooking with FCC!</h1>
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Classes</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+
+
+
+	create-a-gradual-css-linear-gradient.txt
+
+<style>
+  div {
+    border-radius: 20px;
+    width: 70%;
+    height: 400px;
+    margin: 50px auto;
+    background: linear-gradient(35deg,#CCFFFF,#FFCCCC);
+  }
+
+</style>
+
+<div></div>
+
+
+
+
+
+	use-a-css-linear-gradient-to-create-a-striped-element.txt
+
+<style>
+
+  div{
+    border-radius: 20px;
+    width: 70%;
+    height: 400px;
+    margin:  50 auto;
+    background: repeating-linear-gradient(
+      45deg,
+      yellow 0px,
+      yellow 40px,
+      black 40px,
+      black 80px
+    );
+  }
+
+</style>
+
+<div></div>
+
+
+
+
+
+	create-texture-by-adding-a-subtle-pattern-as-a-background-image.txt
+
+<style>
+  body {
+background: url(https://cdn-media-1.freecodecamp.org/imgr/MJAkxbh.png);
+  }
+</style>
+
+
+
+
+
+	use-the-css-transform-scale-property-to-change-the-size-of-an-element.txt
+
+<style>
+  .ball {
+    width: 40px;
+    height: 40px;
+    margin: 50 auto;
+    position: fixed;
+    background: linear-gradient(
+      35deg,
+      #ccffff,
+      #ffcccc
+    );
+    border-radius: 50%;
+  }
+  #ball1 {
+    left: 20%;
+  }
+  #ball2 {
+    left: 65%;
+    transform: scale(1.5);
+  }
+
+
+</style>
+
+<div class="ball" id= "ball1"></div>
+<div class="ball" id= "ball2"></div>
+
+
+
+
+
+	use-the-css-transform-scale-property-to-scale-an-element-on-hover.txt
+
+<style>
+  div {
+    width: 70%;
+    height: 100px;
+    margin:  50px auto;
+    background: linear-gradient(
+      53deg,
+      #ccfffc,
+      #ffcccf
+    );
+  }
+  div:hover {transform: scale(1.1);}
+
+
+
+</style>
+
+<div></div>
+
+
+
+
+
+	use-the-css-transform-scale-property-to-scale-an-element-on-hover(1).txt
+
+<style>
+  div {
+    width: 70%;
+    height: 100px;
+    margin:  50px auto;
+    background: linear-gradient(
+      53deg,
+      #ccfffc,
+      #ffcccf
+    );
+  }
+  div:hover {transform: scale(1.1);}
+
+
+
+</style>
+
+<div></div>
+
+
+
+
+
+	use-the-css-transform-property-skewx-to-skew-an-element-along-the-x-axis.txt
+
+<style>
+  div {
+    width: 70%;
+    height: 100px;
+    margin:  50px auto;
+  }
+  #top {
+    background-color: red;
+  }
+  #bottom {
+    background-color: blue;
+    transform: skewX(24deg);
+
+  }
+</style>
+
+<div id="top"></div>
+<div id="bottom"></div>
+
+
+
+
+
+	use-the-css-transform-property-skewy-to-skew-an-element-along-the-y-axis.txt
+
+<style>
+  div {
+    width: 70%;
+    height: 100px;
+    margin: 50px auto;
+  }
+  #top {
+    background-color: red;
+    transform: skewY(-10deg);
+
+  }
+  #bottom {
+    background-color: blue;
+    transform: skewX(24deg);
+  }
+</style>
+
+<div id="top"></div>
+<div id="bottom"></div>
+
+
+
+
+
+	create-a-graphic-using-css.txt
+
+<style>
+  .center {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    border-radius: 50%;
+    box-shadow: 25px 10px 0px 0px blue;
+    
+  }
+
+</style>
+<div class="center"></div>
+
+
+
+
+
+	create-a-graphic-using-css(1).txt
+
+<style>
+  .center {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    border-radius: 50%;
+    box-shadow: 25px 10px 0px 0px blue;
+    
+  }
+
+</style>
+<div class="center"></div>
+
+
+
