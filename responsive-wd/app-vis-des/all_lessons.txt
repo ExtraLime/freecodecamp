@@ -843,3 +843,189 @@ right: 50px;
 
 
 
+
+
+	push-elements-left-or-right-with-the-float-property.txt
+
+<head>
+  <style>
+    #left {
+      float: left;
+      width: 50%;
+    }
+    #right {
+      float: right;
+      width: 40%;
+    }
+    aside, section {
+      padding: 2px;
+      background-color: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome!</h1>
+  </header>
+  <section id="left">
+    <h2>Content</h2>
+    <p>Good stuff</p>
+  </section>
+  <aside id="right">
+    <h2>Sidebar</h2>
+    <p>Links</p>
+  </aside>
+</body>
+
+
+
+
+
+	change-the-position-of-overlapping-elements-with-the-z-index-property.txt
+
+<style>
+  div {
+    width: 60%;
+    height: 200px;
+    margin-top: 20px;
+  }
+
+  .first {
+    background-color: red;
+    position: absolute;
+    z-index:2;
+  }
+  .second {
+    background-color: blue;
+    position: absolute;
+    left: 40px;
+    top: 50px;
+    z-index: 1;
+  }
+</style>
+
+<div class="first"></div>
+<div class="second"></div>
+
+
+
+
+
+	center-an-element-horizontally-using-the-margin-property.txt
+
+<style>
+  div {
+    background-color: blue;
+    height: 100px;
+    width: 100px;
+    margin: auto;
+  }
+</style>
+<div></div>
+
+
+
+
+
+	learn-about-complementary-colors.txt
+
+<style>
+  body {
+    background-color: #FFFFFF;
+  }
+  .blue {
+    background-color: blue;
+  }
+  .yellow {
+    background-color: yellow;
+  }
+  div {
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+  }
+</style>
+<div class="blue"></div>
+<div class="yellow"></div>
+
+
+
+
+
+	learn-about-tertiary-colors.txt
+
+<style>
+  body {
+    background-color: #FFFFFF;
+  }
+
+  .orange {
+    background-color: #FF7F00;
+  }
+
+  .cyan {
+    background-color: #00FFFF;
+  }
+
+  .raspberry {
+    background-color: #FF007F;
+  }
+
+  div {
+    height: 100px;
+    width: 100px;
+    margin-bottom: 5px;
+  }
+</style>
+
+<div class="orange"></div>
+<div class="cyan"></div>
+<div class="raspberry"></div>
+
+
+
+
+
+	adjust-the-color-of-various-elements-to-complementary-colors.txt
+
+<style>
+  body {
+    background-color: white;
+  }
+  header {
+    background-color: #09A7A1;
+    color: white;
+    padding: 0.25em;
+  }
+  h2 {
+    color: #09A7A1;
+  }
+  button {
+    background-color: #FF790E;
+  }
+  footer {
+    background-color: #09A7A1;
+    color: white;
+    padding: 0.5em;
+  }
+</style>
+<header>
+  <h1>Cooking with FCC!</h1>
+</header>
+<main>
+  <article>
+    <h2>Machine Learning in the Kitchen</h2>
+    <p>Join this two day workshop that walks through how to implement cutting-edge snack-getting algorithms with a command line interface. Coding usually involves writing exact instructions, but sometimes you need your computer to execute flexible commands, like <code>fetch Pringles</code>.</p>
+    <button>Sign Up</button>
+  </article>
+  <article>
+    <h2>Bisection Vegetable Chopping</h2>
+    <p>This week-long retreat will level-up your coding ninja skills to actual ninja skills. No longer is the humble bisection search limited to sorted arrays or coding interview questions, applying its concepts in the kitchen will have you chopping carrots in O(log n) time before you know it.</p>
+    <button>Sign Up</button>
+  </article>
+</main>
+<br>
+<footer>&copy; 2018 FCC Kitchen</footer>
+
+
+
