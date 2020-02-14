@@ -1,0 +1,102 @@
+Start
+
+
+
+
+	standardize-times-with-the-html5-datetime-attribute.txt
+
+<body>
+  <header>
+    <h1>Tournaments</h1>
+  </header>
+  <article>
+    <h2>Mortal Kombat Tournament Survey Results</h2>
+
+    <!-- Add your code below this line -->
+
+    <p>Thank you to everyone for responding to Master Camper Cat's survey. The best day to host the vaunted Mortal Kombat tournament is <time datetime="2016-09-15">Thursday, September 15<sup>th</sup> </time>. May the best ninja win!</p>
+
+    <!-- Add your code above this line -->
+
+    <section>
+      <h3>Comments:</h3>
+      <article>
+        <p>Posted by: Sub-Zero on <time datetime="2016-08-13T20:01Z">August 13<sup>th</sup></time></p>
+        <p>Johnny Cage better be there, I'll finish him!</p>
+      </article>
+      <article>
+        <p>Posted by: Doge on <time datetime="2016-08-15T08:12Z">August 15<sup>th</sup></time></p>
+        <p>Wow, much combat, so mortal.</p>
+      </article>
+      <article>
+        <p>Posted by: The Grim Reaper on <time datetime="2016-08-16T00:00Z">August 16<sup>th</sup></time></p>
+        <p>Looks like I'll be busy that day.</p>
+      </article>
+    </section>
+  </article>
+  <footer>&copy; 2018 Camper Cat</footer>
+</body>
+
+
+
+
+
+	create-a-media-query.txt
+
+<style>
+  p {
+    font-size: 20px;
+  }
+
+  /* Add media query below */
+  @media (max-height: 800px) { p {font-size: 10px} }
+</style>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis tempus massa. Aenean erat nisl, gravida vel vestibulum cursus, interdum sit amet lectus. Sed sit amet quam nibh. Suspendisse quis tincidunt nulla. In hac habitasse platea dictumst. Ut sit amet pretium nisl. Vivamus vel mi sem. Aenean sit amet consectetur sem. Suspendisse pretium, purus et gravida consequat, nunc ligula ultricies diam, at aliquet velit libero a dui.</p>
+
+
+
+
+
+	make-an-image-responsive.txt
+
+<style>
+img {
+    max-width: 100%;
+    display: block;
+    height: auto;
+}
+</style>
+
+<img src="https://s3.amazonaws.com/freecodecamp/FCCStickerPack.jpg" alt="freeCodeCamp stickers set">
+
+
+
+
+
+	use-a-retina-image-for-higher-resolution-displays.txt
+
+<style>
+img { height: 100px; width: 100px}
+</style>
+
+<img src="https://s3.amazonaws.com/freecodecamp/FCCStickers-CamperBot200x200.jpg" alt="freeCodeCamp sticker that says 'Because CamperBot Cares'">
+
+
+
+
+
+	make-typography-responsive.txt
+
+<style>
+h2 { width: 80vw;
+     }
+p { width: 75vmin;
+}
+</style>
+
+<h2>Importantus Ipsum</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis tempus massa. Aenean erat nisl, gravida vel vestibulum cursus, interdum sit amet lectus. Sed sit amet quam nibh. Suspendisse quis tincidunt nulla. In hac habitasse platea dictumst. Ut sit amet pretium nisl. Vivamus vel mi sem. Aenean sit amet consectetur sem. Suspendisse pretium, purus et gravida consequat, nunc ligula ultricies diam, at aliquet velit libero a dui.</p>
+
+
+
