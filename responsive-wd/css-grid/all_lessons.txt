@@ -1,0 +1,481 @@
+Start
+
+
+
+
+	create-your-first-css-grid.txt
+
+<style>
+  .d1{background:LightSkyBlue;}
+  .d2{background:LightSalmon;}
+  .d3{background:PaleTurquoise;}
+  .d4{background:LightPink;}
+  .d5{background:PaleGreen;}
+
+  .container {
+    font-size: 40px;
+    width: 100%;
+    background: LightGray;
+    /* add your code below this line */
+    display: grid;
+
+    /* add your code above this line */
+  }
+</style>
+
+<div class="container">
+  <div class="d1">1</div>
+  <div class="d2">2</div>
+  <div class="d3">3</div>
+  <div class="d4">4</div>
+  <div class="d5">5</div>
+</div>
+
+
+
+
+
+	add-columns-with-grid-template-columns.txt
+
+<style>
+  .d1{background:LightSkyBlue;}
+  .d2{background:LightSalmon;}
+  .d3{background:PaleTurquoise;}
+  .d4{background:LightPink;}
+  .d5{background:PaleGreen;}
+
+  .container {
+    font-size: 40px;
+    width: 100%;
+    background: LightGray;
+    display: grid;
+    /* add your code below this line */
+    grid-template-columns: 100px 100px 100px;
+
+    /* add your code above this line */
+  }
+</style>
+
+<div class="container">
+  <div class="d1">1</div>
+  <div class="d2">2</div>
+  <div class="d3">3</div>
+  <div class="d4">4</div>
+  <div class="d5">5</div>
+</div>
+
+
+
+
+
+	add-rows-with-grid-template-rows.txt
+
+<style>
+  .d1{background:LightSkyBlue;}
+  .d2{background:LightSalmon;}
+  .d3{background:PaleTurquoise;}
+  .d4{background:LightPink;}
+  .d5{background:PaleGreen;}
+
+  .container {
+    font-size: 40px;
+    width: 100%;
+    background: LightGray;
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    /* add your code below this line */
+    grid-template-rows: 50px 50px;
+
+    /* add your code above this line */
+  }
+</style>
+
+<div class="container">
+  <div class="d1">1</div>
+  <div class="d2">2</div>
+  <div class="d3">3</div>
+  <div class="d4">4</div>
+  <div class="d5">5</div>
+</div>
+
+
+
+
+
+	use-css-grid-units-to-change-the-size-of-columns-and-rows.txt
+
+<style>
+  .d1{background:LightSkyBlue;}
+  .d2{background:LightSalmon;}
+  .d3{background:PaleTurquoise;}
+  .d4{background:LightPink;}
+  .d5{background:PaleGreen;}
+
+  .container {
+    font-size: 40px;
+    width: 100%;
+    background: LightGray;
+    display: grid;
+    /* modify the code below this line */
+
+    grid-template-columns: 1fr 100px 2fr;
+
+    /* modify the code above this line */
+    grid-template-rows: 50px 50px;
+  }
+</style>
+
+<div class="container">
+  <div class="d1">1</div>
+  <div class="d2">2</div>
+  <div class="d3">3</div>
+  <div class="d4">4</div>
+  <div class="d5">5</div>
+</div>
+
+
+
+
+
+	create-a-column-gap-using-grid-column-gap.txt
+
+<style>
+  .d1{background:LightSkyBlue;}
+  .d2{background:LightSalmon;}
+  .d3{background:PaleTurquoise;}
+  .d4{background:LightPink;}
+  .d5{background:PaleGreen;}
+
+  .container {
+    font-size: 40px;
+    min-height: 300px;
+    width: 100%;
+    background: LightGray;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    /* add your code below this line */
+    grid-column-gap: 20px;
+
+    /* add your code above this line */
+  }
+</style>
+
+<div class="container">
+  <div class="d1">1</div>
+  <div class="d2">2</div>
+  <div class="d3">3</div>
+  <div class="d4">4</div>
+  <div class="d5">5</div>
+</div>
+
+
+
+
+
+	create-a-row-gap-using-grid-row-gap.txt
+
+<style>
+  .d1{background:LightSkyBlue;}
+  .d2{background:LightSalmon;}
+  .d3{background:PaleTurquoise;}
+  .d4{background:LightPink;}
+  .d5{background:PaleGreen;}
+
+  .container {
+    font-size: 40px;
+    min-height: 300px;
+    width: 100%;
+    background: LightGray;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    /* add your code below this line */
+    grid-row-gap: 5px;
+
+    /* add your code above this line */
+  }
+</style>
+
+<div class="container">
+  <div class="d1">1</div>
+  <div class="d2">2</div>
+  <div class="d3">3</div>
+  <div class="d4">4</div>
+  <div class="d5">5</div>
+</div>
+
+
+
+
+
+	add-gaps-faster-with-grid-gap.txt
+
+<style>
+  .d1{background:LightSkyBlue;}
+  .d2{background:LightSalmon;}
+  .d3{background:PaleTurquoise;}
+  .d4{background:LightPink;}
+  .d5{background:PaleGreen;}
+
+  .container {
+    font-size: 40px;
+    min-height: 300px;
+    width: 100%;
+    background: LightGray;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    /* add your code below this line */
+    grid-gap: 10px 20px;
+
+    /* add your code above this line */
+  }
+</style>
+<div class="container">
+  <div class="d1">1</div>
+  <div class="d2">2</div>
+  <div class="d3">3</div>
+  <div class="d4">4</div>
+  <div class="d5">5</div>
+</div>
+
+
+
+
+
+	use-grid-column-to-control-spacing.txt
+
+<style>
+  .item1{background:LightSkyBlue;}
+  .item2{background:LightSalmon;}
+  .item3{background:PaleTurquoise;}
+  .item4{background:LightPink;}
+
+  .item5 {
+    background: PaleGreen;
+    /* add your code below this line */
+  grid-column: 2 / 4 ;
+
+    /* add your code above this line */
+  }
+
+  .container {
+    font-size: 40px;
+    min-height: 300px;
+    width: 100%;
+    background: LightGray;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 10px;
+  }
+</style>
+
+<div class="container">
+  <div class="item1">1</div>
+  <div class="item2">2</div>
+  <div class="item3">3</div>
+  <div class="item4">4</div>
+  <div class="item5">5</div>
+</div>
+
+
+
+
+
+	use-grid-row-to-control-spacing.txt
+
+<style>
+  .item1{background:LightSkyBlue;}
+  .item2{background:LightSalmon;}
+  .item3{background:PaleTurquoise;}
+  .item4{background:LightPink;}
+
+  .item5 {
+    background: PaleGreen;
+    grid-column: 2 / 4;
+    /* add your code below this line */
+    grid-row: 2 / 4
+
+    /* add your code above this line */
+  }
+
+  .container {
+    font-size: 40px;
+    min-height: 300px;
+    width: 100%;
+    background: LightGray;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 10px;
+  }
+</style>
+
+<div class="container">
+  <div class="item1">1</div>
+  <div class="item2">2</div>
+  <div class="item3">3</div>
+  <div class="item4">4</div>
+  <div class="item5">5</div>
+</div>
+
+
+
+
+
+	align-an-item-horizontally-using-justify-self.txt
+
+<style>
+  .item1{background: LightSkyBlue;}
+
+  .item2 {
+    background: LightSalmon;
+    /* add your code below this line */
+    justify-self: center;
+
+    /* add your code above this line */
+  }
+
+  .item3{background:PaleTurquoise;}
+  .item4{background:LightPink;}
+  .item5{background:PaleGreen;}
+
+  .container {
+    font-size: 40px;
+    min-height: 300px;
+    width: 100%;
+    background: LightGray;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 10px;
+  }
+</style>
+
+<div class="container">
+  <div class="item1">1</div>
+  <div class="item2">2</div>
+  <div class="item3">3</div>
+  <div class="item4">4</div>
+  <div class="item5">5</div>
+</div>
+
+
+
+
+
+	align-an-item-vertically-using-align-self.txt
+
+<style>
+  .item1{background:LightSkyBlue;}
+  .item2{background:LightSalmon;}
+
+  .item3 {
+    background: PaleTurquoise;
+    /* add your code below this line */
+    align-self: end;
+
+    /* add your code above this line */
+  }
+
+  .item4{background:LightPink;}
+  .item5{background:PaleGreen;}
+
+  .container {
+    font-size: 40px;
+    min-height: 300px;
+    width: 100%;
+    background: LightGray;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 10px;
+  }
+</style>
+
+<div class="container">
+  <div class="item1">1</div>
+  <div class="item2">2</div>
+  <div class="item3">3</div>
+  <div class="item4">4</div>
+  <div class="item5">5</div>
+</div>
+
+
+
+
+
+	align-all-items-horizontally-using-justify-items.txt
+
+<style>
+  .item1{background:LightSkyBlue;}
+  .item2{background:LightSalmon;}
+  .item3{background:PaleTurquoise;}
+  .item4{background:LightPink;}
+  .item5{background:PaleGreen;}
+
+  .container {
+    font-size: 40px;
+    min-height: 300px;
+    width: 100%;
+    background: LightGray;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    /* add your code below this line */
+    justify-items: center;
+
+    /* add your code above this line */
+  }
+</style>
+
+<div class="container">
+  <div class="item1">1</div>
+  <div class="item2">2</div>
+  <div class="item3">3</div>
+  <div class="item4">4</div>
+  <div class="item5">5</div>
+</div>
+
+
+
+
+
+	align-all-items-vertically-using-align-items.txt
+
+<style>
+  .item1{background:LightSkyBlue;}
+  .item2{background:LightSalmon;}
+  .item3{background:PaleTurquoise;}
+  .item4{background:LightPink;}
+  .item5{background:PaleGreen;}
+
+  .container {
+    font-size: 40px;
+    min-height: 300px;
+    width: 100%;
+    background: LightGray;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    /* add your code below this line */
+    align-items: end;
+
+    /* add your code above this line */
+  }
+</style>
+
+<div class="container">
+  <div class="item1">1</div>
+  <div class="item2">2</div>
+  <div class="item3">3</div>
+  <div class="item4">4</div>
+  <div class="item5">5</div>
+</div>
+
+
+
