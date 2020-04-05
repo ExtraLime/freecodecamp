@@ -1,2 +1,225 @@
-<! DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<head>
+    <title>Tennis Survey</title>
+    <link rel = "stylesheet" type = "text/css"href = "styles.css" />
+</head>
+<div class="container">
+    <header class="header">
+      <h1 id="title" class="text-center">Tennis Player Survey Form</h1>
+      <p id="description" class="description text-center">
+        Thank you for taking the time to tell us about your favorite tennis player
+      </p>
+    </header>
+    <form id="survey-form">
+      <div class="form-group">
+        <label id="name-label" for="name">Name</label>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          class="form-control"
+          placeholder="Enter your name"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label id="email-label" for="email">Email</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          class="form-control"
+          placeholder="Enter your Email"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label id="number-label" for="number"
+          >Age<span class="clue">(optional)</span></label
+        >
+        <input
+          type="number"
+          name="age"
+          id="number"
+          min="10"
+          max="99"
+          class="form-control"
+          placeholder="Age"
+        />
+      </div>
+      <div class="form-group">
+        <p>How often do you play tennis?</p>
+        <select id="dropdown" name="role" class="form-control" required>
+          <option disabled selected value>Select a frequency</option>
+          <option value="alot">A lot (3+ times a week)</option>
+          <option value="often">Often (at least twice a week)</option>
+          <option value="sometimes">Sometimes (Once or twice a year)</option>
+          <option value="never">I dont play tennis.</option>
+        </select>
+      </div>
+  
+      <div class="form-group">
+        <p>Do you play competitively?</p>
+        <label>
+          <input
+            name="user-recommend"
+            value="yes1"
+            type="radio"
+            class="input-radio"
+            checked
+          />Yes (club and tournaments)</label
+        >
+        <label>
+          <input
+            name="user-recommend"
+            value="yes2"
+            type="radio"
+            class="input-radio"
+          />Yes (Club)</label
+        >
+  
+        <label
+          ><input
+            name="user-recommend"
+            value="no"
+            type="radio"
+            class="input-radio"
+          />No</label
+        >
+      </div>
+  
+      <div class="form-group">
+        <p>
+          What is your favorite Grand Slam?
+        </p>
+        <select id="most-like" name="mostLike" class="form-control" required>
+          <option disabled selected value>Select a Slam</option>
+          <option value="ausi">Australian Open</option>
+          <option value="french">Roland Garros</option>
+          <option value="wimbledon">Wimbledon</option>
+          <option value="usopen">US Open</option>
+        </select>
+      </div>
+  
+      <div class="form-group">
+        <p>
+          Choose your favorite players
+          <span class="clue">(Check all that apply)</span>
+        </p>
+  
+        <label
+          ><input
+            name="prefer"
+            value="fed"
+            type="checkbox"
+            class="input-checkbox"
+          />Roger Federer</label
+        >
+        <label>
+          <input
+            name="prefer"
+            value="rafa"
+            type="checkbox"
+            class="input-checkbox"
+          />Rafael Nadal</label
+        >
+        <label
+          ><input
+            name="prefer"
+            value="djok"
+            type="checkbox"
+            class="input-checkbox"
+          />Novak Djokovic</label
+        >
+        <label
+          ><input
+            name="prefer"
+            value="kyrgios"
+            type="checkbox"
+            class="input-checkbox"
+          />Nick Kyrgios</label
+        >
+        <label
+          ><input
+            name="prefer"
+            value="theim"
+            type="checkbox"
+            class="input-checkbox"
+          />Domonic Theim</label
+        >
+        <label
+          ><input
+            name="prefer"
+            value="monfils"
+            type="checkbox"
+            class="input-checkbox"
+          />Gael Monfils</label
+        >
+        <label
+          ><input
+            name="prefer"
+            value="dport"
+            type="checkbox"
+            class="input-checkbox"
+          />Juan Del Portro</label
+        >
+        <label
+          ><input
+            name="prefer"
+            value="scharz"
+            type="checkbox"
+            class="input-checkbox"
+          />Diego Schrawzman</label
+        >
+        <label
+          ><input
+            name="prefer"
+            value="waw"
+            type="checkbox"
+            class="input-checkbox"
+          />Stan Warwrinka</label
+        >
+        <label
+          ><input
+            name="prefer"
+            value="assime"
+            type="checkbox"
+            class="input-checkbox"
+          />Felix Auger Aliassime</label
+        >
+        <label
+          ><input
+            name="prefer"
+            value="fab"
+            type="checkbox"
+            class="input-checkbox"
+          />Fabio Fognini</label
+        >
+        <label
+        ><input
+          name="prefer"
+          value="murry"
+          type="checkbox"
+          class="input-checkbox"
+        />Andy Murray</label
+      >
+      </div>
+  
+      <div class="form-group">
+        <p>Any comments or suggestions?</p>
+        <textarea
+          id="comments"
+          class="input-textarea"
+          name="comment"
+          placeholder="Enter your comment here..."
+        ></textarea>
+      </div>
+  
+      <div class="form-group">
+        <button type="submit" id="submit" class="submit-button">
+          Submit
+        </button>
+      </div>
+    </form>
+  </div>
+  </html>
