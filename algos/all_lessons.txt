@@ -1,0 +1,246 @@
+Start
+
+
+
+
+	find-the-symmetric-difference.txt
+
+function sym(args) {
+  console.log(arguments)
+  var rtn_set = new Set(arguments[0])
+
+  for (var i=1; i < arguments.length;i++){
+        var c_set = new Set(arguments[i])
+    for (let elem of c_set) {
+      if (rtn_set.has(elem)){
+        rtn_set.delete(elem)
+      }else{
+        rtn_set.add(elem)
+      }
+    }
+    
+  }
+  console.log([...rtn_set])
+  return [...rtn_set]}
+sym([1, 2, 3], [5, 2, 1, 4]);
+
+
+
+
+
+	inventory-update.txt
+
+function updateInventory(arr1, arr2) {
+    var rtnObj = {}
+    for (let item in arr1){
+        rtnObj[arr1[item][1]] = arr1[item][0];}
+    console.log(rtnObj)
+    for (var i=0; i<arr2.length; i++){
+        var key = arr2[i]
+        console.log(key)
+        if (rtnObj.hasOwnProperty(key[1])){
+            rtnObj[key[1]] += arr2[i][0]
+        }else{rtnObj[key[1]] = arr2[i][0]
+        }    
+    };
+    var items = Object.keys(rtnObj).sort();
+    var res = items.map(item => [rtnObj[item],item]);
+   return res
+    
+
+    }
+    
+   
+
+
+// Example inventory lists
+var curInv = [
+    [21, "Bowling Ball"],
+    [2, "Dirty Sock"],
+    [1, "Hair Pin"],
+    [5, "Microphone"]
+];
+
+var newInv = [
+    [2, "Hair Pin"],
+    [3, "Half-Eaten Apple"],
+    [67, "Bowling Ball"],
+    [7, "Toothpaste"]
+];
+
+updateInventory(curInv, newInv);
+
+
+
+
+
+	no-repeats-please.txt
+
+function permAlone(str) {
+  
+  var regex = /(.)\1+/;
+
+ 
+  var arr = str.split("");
+  var permutations = [];
+  var tmp;
+
+  
+  if (str.match(regex) !== null && str.match(regex)[0] === str) return 0;
+
+ 
+  function swap(index1, index2) {
+    tmp = arr[index1];
+    arr[index1] = arr[index2];
+    arr[index2] = tmp;
+  }
+
+  
+  function generate(int) {
+    if (int === 1) {
+      // Make sure to join the characters as we create  the permutation arrays
+      permutations.push(arr.join(""));
+    } else {
+      for (var i = 0; i != int; ++i) {
+        generate(int - 1);
+        swap(int % 2 ? 0 : i, int - 1);
+      }
+    }
+  }
+
+  generate(arr.length);
+
+  
+  var filtered = permutations.filter(function(string) {
+    return !string.match(regex);
+  });
+
+ 
+  return filtered.length;
+}
+
+
+permAlone("aab");
+
+
+
+
+
+	pairwise.txt
+
+function pairwise(arr, arg) {
+ // Set sum of indices to zero
+ var sum = 0;
+ // make a local copy of the arguments object so we don't modify it directly
+ var pairArr = arr.slice();
+ // looping from first element
+ for(var i = 0; i < pairArr.length; i++) {
+   //Looping from second element by setting first element  constant
+   for(var j = i + 1; j < pairArr.length; j++) {
+     // Check whether the sum is equal to arg
+     if(pairArr[i] + pairArr[j] == arg) {
+       //Add the indices
+       sum += i + j;
+       //Set the indices to NaN so that they can't be used in next iteration
+       pairArr[i] = pairArr[j] = NaN;
+     }
+   }
+ }
+ return sum;
+}
+
+// test here
+pairwise([1,4,2,3,0,5], 7);
+
+
+
+
+
+	implement-bubble-sort.txt
+
+function bubbleSort(array) {
+  var swap_bool = true;
+  while (swap_bool){
+    var inner_swap = false
+  for (var i =1; i<array.length - 1;i++){    
+    if (array[i] > array[i+1]){
+      var a = array[i]
+      var b = array[i+1]
+      array[i] = b
+      array[i+1] = a
+      inner_swap = true
+    }
+    if (array[i-1] > array[i]) {
+      let c = array[i]
+      let d = array[i-1]
+      array[i] = d
+      array[i-1] = c
+      inner_swap = true
+    }
+console.log(array)
+  }
+  if (inner_swap) {swap_bool = true}else{swap_bool=false}
+  }
+  return array;
+  // change code above this line
+}
+
+bubbleSort([1, 4, 2, 8, 345, 123, 43, 32, 5643, 63, 123, 43, 2, 55, 1, 234, 92]);
+
+
+
+
+
+	implement-insertion-sort.txt
+
+const insertionSort = (nums) => {
+  for (let i = 1; i < nums.length; i++) {
+    let j = i - 1
+    let temp = nums[i]
+    while (j >= 0 && nums[j] > temp) {
+      nums[j + 1] = nums[j]
+      j--
+    }
+    nums[j+1] = temp
+  }
+  return nums
+}
+
+insertionSort([1, 4, 2, 8, 345, 123, 43, 32, 5643, 63, 123, 43, 2, 55, 1, 234, 92]);
+
+
+
+
+
+	implement-quick-sort.txt
+
+function quickSort(origArray) {
+	if (origArray.length <= 1) { 
+		return origArray;
+	} else {
+
+		var left = [];
+		var right = [];
+		var newArray = [];
+		var pivot = origArray.pop();
+		var length = origArray.length;
+
+		for (var i = 0; i < length; i++) {
+			if (origArray[i] <= pivot) {
+				left.push(origArray[i]);
+			} else {
+				right.push(origArray[i]);
+			}
+		}
+origArray = newArray.concat(quickSort(left), pivot, quickSort(right));
+
+		return origArray
+	}
+}
+
+
+const t_array = [1, 4, 2, 8, 345, 123, 43, 32, 5643, 63, 123, 43, 2, 55, 1, 234, 92]
+console.log(quickSort(t_array))
+
+
+
